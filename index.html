@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CssMurni-->
+    <link rel="stylesheet" href="style.css">
+    <!--fontAwesomew-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="app">
+        <div class="container">
+            <div id="wrapper">
+                <input type="text" placeholder="Task To Be Done">
+                <button id="add-btn">Add</button>
+            </div>
+            <div id="tasks">
+                <p id="pending-task">
+                    Kamu Punya <span class="count-value">0</span> Task (s) Untuk Menyelesaikan
+                </p>
+            </div>
+        </div>
+        <p id="error">Masukkan Yang Benar!</p>
+    </div>
+
+
+
+  <!--js-->
+  <script src="main.js"></script> 
+  
+  <!--PWA-->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker berhasil diregistrasi:', registration);
+        })
+        .catch(function(error) {
+          console.log('Gagal mendaftar Service Worker:', error);
+        });
+    }
+  </script>
+  
+</body>
+</html>                                                             
